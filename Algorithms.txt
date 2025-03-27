@@ -1,0 +1,18 @@
+FIND MAJORITY OF ELEMENT
+
+var majorityElement = function(nums) {
+    let arrMap = new Map();
+    for(num of nums){
+        arrMap.set(num,(arrMap.get(num) + 1 )|| 1);
+        if(arrMap.get(num)>nums.length/2){
+            return num;
+        }
+    }
+};
+
+var majorityElement = function(nums) {
+    nums.sort((a, b) => a - b);
+    return nums[Math.floor(nums.length / 2)];
+};
+
+=======================================================================
